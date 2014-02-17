@@ -2,7 +2,7 @@
 
 namespace AntonChekhovRPG
 {
-    abstract class Enemy
+    abstract class Enemy: Character
     {
     }
 }
