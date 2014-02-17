@@ -2,7 +2,7 @@
 
 namespace AntonChekhovRPG
 {
-    abstract class Character
+    abstract class Character : WorldEntity
     {
     }
 }
