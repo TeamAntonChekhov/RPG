@@ -52,7 +52,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Interface Name="AntonChekhovRPG.Interfaces.IItem" Collapsed="true">
-    <Position X="7.25" Y="4.25" Width="1.5" />
+    <Position X="7.5" Y="4.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
       <FileName>Interfaces\IItem.cs</FileName>
@@ -68,7 +68,7 @@
   <Enum Name="AntonChekhovRPG.Enumerations.ItemType" Collapsed="true">
     <Position X="7.75" Y="1.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAgAAAACAAAAAAAAAACAAIAAAAAAAAAAAAAAAAAQA=</HashCode>
       <FileName>Enumerations\ItemType.cs</FileName>
     </TypeIdentifier>
   </Enum>

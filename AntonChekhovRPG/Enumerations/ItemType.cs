@@ -2,5 +2,5 @@
 
 namespace AntonChekhovRPG.Enumerations
 {
-    public enum GameState { Start, Playing, Battle, Quit, GameOver };
+    public enum ItemType { Start, Playing, Battle, Quit, GameOver };
 }
