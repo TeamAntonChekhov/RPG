@@ -1,8 +1,11 @@
 ﻿using System;
 
-namespace AntonChekhovRPG.Enumerations
+namespace AntonChekhovRPG
 {
     enum GameState
     {
+        MainMenu,
+        NewGame,
+        Exit
     }
 }

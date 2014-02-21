@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace AntonChekhovRPG.Enumerations
+namespace AntonChekhovRPG
 {
     public enum GameState { Start, Playing, Battle, Quit, GameOver };
 }
