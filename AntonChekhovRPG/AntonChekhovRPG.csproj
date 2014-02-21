@@ -41,25 +41,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Character.cs" />
-    <Compile Include="Enemy.cs" />
     <Compile Include="Enumerations\GameState.cs" />
     <Compile Include="Enumerations\ItemType.cs" />
-    <Compile Include="Interfaces\IItem.cs" />
-    <Compile Include="Interfaces\IWorldEntity.cs" />
-    <Compile Include="Item.cs" />
-    <Compile Include="Location.cs" />
-    <Compile Include="Player.cs" />
+    <Compile Include="MainMenu.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="WorldEntity.cs" />
+    <Compile Include="UI\ConsoleInput.cs" />
+    <Compile Include="UI\ConsoleOutput.cs" />
+    <Compile Include="UI\Settings.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="ClassDiagram1.cd" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Extensions\" />
+    <Folder Include="Interfaces\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

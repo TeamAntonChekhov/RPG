@@ -1,14 +1,31 @@
-﻿using System;
+﻿using AntonChekhovRPG.UI;
+using System;
 
 namespace AntonChekhovRPG
 {
     class Program
     {
-        private GameState gameState;
+        private static GameState gameState = GameState.MainMenu;
 
-        static void Main(string[] args)
+        static void Main()
         {
-            
+            Settings.Init();
+
+            while (true)
+            {
+                switch (gameState)
+                {
+                    case GameState.MainMenu:
+                        gameState = MainMenu.Start();
+                        break;
+
+                    case GameState.NewGame:
+                        break;
+
+                    case GameState.Exit:
+                        return;
+                }
+            }
         }
     }
 }

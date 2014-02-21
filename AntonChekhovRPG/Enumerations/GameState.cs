@@ -6,6 +6,7 @@ namespace AntonChekhovRPG
     {
         MainMenu,
         NewGame,
+        Help,
         Exit
     }
 }
