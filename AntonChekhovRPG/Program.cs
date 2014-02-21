@@ -1,4 +1,4 @@
-﻿using AntonChekhovRPG.UI;
+﻿using AntonChekhovRPG.ConsoleUI;
 using System;
 
 namespace AntonChekhovRPG
@@ -16,10 +16,11 @@ namespace AntonChekhovRPG
                 switch (gameState)
                 {
                     case GameState.MainMenu:
-                        gameState = MainMenu.Start();
+                        gameState = MainMenu.Init();
                         break;
 
                     case GameState.NewGame:
+                        //gameState = 
                         break;
 
                     case GameState.Exit:
