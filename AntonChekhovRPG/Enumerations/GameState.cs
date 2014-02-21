@@ -4,5 +4,6 @@ namespace AntonChekhovRPG.Enumerations
 {
     enum GameState
     {
+        
     }
 }
