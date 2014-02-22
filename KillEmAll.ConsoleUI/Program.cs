@@ -1,7 +1,7 @@
-﻿using AntonChekhovRPG.ConsoleUI;
-using System;
+﻿using System;
+using KillEmAll.Common;
 
-namespace AntonChekhovRPG
+namespace KillEmAll.ConsoleUI
 {
     class Program
     {
@@ -11,6 +11,10 @@ namespace AntonChekhovRPG
         {
             Settings.Init();
             GameManager newGame = new GameManager();
+
+            newGame.Render += Renderer.TestWrite;
+            newGame.UserInput += ConsoleInput.TestReadInput;
+
 
             while (true)
             {

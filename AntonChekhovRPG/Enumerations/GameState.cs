@@ -7,6 +7,7 @@ namespace AntonChekhovRPG
         MainMenu,
         NewGame,
         Help,
+        GameOver,
         Exit
     }
 }

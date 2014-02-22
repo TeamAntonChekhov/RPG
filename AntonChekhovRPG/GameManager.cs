@@ -8,28 +8,29 @@ namespace AntonChekhovRPG
 {
     class GameManager
     {
-        private GameManager instance;
+        private Dungeon currentDungeon;
+        private Player player;
 
-        public GameManager Instance 
+        public GameManager()
         {
-            get
+            player = Player.Instance;
+        }
+
+        public GameState Run()
+        {
+            GameState gameState = GameState.NewGame;
+
+            while (true)
             {
-                if (instance == null)
+                // Draw world event
+
+                // Take action event
+
+                if (gameState != GameState.NewGame)
                 {
-                    instance = new GameManager();
+                    return gameState;
                 }
-                return instance;
             }
         }
-
-        private GameManager()
-        {
-
-        }
-
-        //public GameState Init()
-        //{
-
-        //}
     }
 }

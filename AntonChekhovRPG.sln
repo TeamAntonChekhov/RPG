@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AntonChekhovRPG", "AntonChekhovRPG\AntonChekhovRPG.csproj", "{1C1DDEA7-5DCA-4421-A39F-B160BB8602F0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KillEmAll.Common", "KillEmAll.Common\KillEmAll.Common.csproj", "{47CCAD52-3127-4F18-901A-F8EEF6B158DF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KillEmAll.ConsoleUI", "KillEmAll.ConsoleUI\KillEmAll.ConsoleUI.csproj", "{C902DB8C-37DB-475B-A12C-EFD6719804BE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +13,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{1C1DDEA7-5DCA-4421-A39F-B160BB8602F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1C1DDEA7-5DCA-4421-A39F-B160BB8602F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1C1DDEA7-5DCA-4421-A39F-B160BB8602F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1C1DDEA7-5DCA-4421-A39F-B160BB8602F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{47CCAD52-3127-4F18-901A-F8EEF6B158DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47CCAD52-3127-4F18-901A-F8EEF6B158DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47CCAD52-3127-4F18-901A-F8EEF6B158DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47CCAD52-3127-4F18-901A-F8EEF6B158DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C902DB8C-37DB-475B-A12C-EFD6719804BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C902DB8C-37DB-475B-A12C-EFD6719804BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C902DB8C-37DB-475B-A12C-EFD6719804BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C902DB8C-37DB-475B-A12C-EFD6719804BE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
