@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using KillEmAll.Common;
 
 namespace KillEmAll.ConsoleUI
 {
@@ -74,7 +75,15 @@ namespace KillEmAll.ConsoleUI
         internal static void TestWrite(object sender, EventArgs e)
         {
             Console.Clear();
-            DrawTextOnPostion(10, 10, "Some Text Here.");
+            int count = 0;
+            Dungeon currentDungeon = (sender as GameManager).CurrentDungeon;
+            DrawTextOnPostion(5, 10, string.Format("Name - {0}", currentDungeon.Name));
+
+
+            foreach (var neighbor in currentDungeon.Neighbors)
+            {
+                DrawTextOnPostion(10 + count++, 10, neighbor.ToString());
+            }
         }
     }
 }

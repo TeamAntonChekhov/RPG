@@ -7,7 +7,7 @@ namespace KillEmAll.Common
 {
     public interface INeighbor : IGameObject
     {
-        void AddNeighbor(params INeighbor[] locations);
-        void RemoveNeighbor(params INeighbor[] locations);
+        void AddNeighbor(params Location[] locations);
+        void RemoveNeighbor(params Location[] locations);
     }
 }

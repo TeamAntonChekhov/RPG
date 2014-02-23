@@ -8,19 +8,19 @@ namespace KillEmAll.Common
 {
     public abstract class Location : GameObject, INeighbor
     {
-        private Collection<INeighbor> neighbors;
+        private Collection<Location> neighbors;
 
-        protected Location(string name, Collection<INeighbor> neighbors) 
+        protected Location(string name, Collection<Location> neighbors) 
             : base(name)
         {
             this.Neighbors = neighbors;
         }
 
-        public Collection<INeighbor> Neighbors
+        public Collection<Location> Neighbors
         {
             get
             {
-                return new Collection<INeighbor>(this.neighbors);
+                return new Collection<Location>(this.neighbors);
             }
             protected set
             {
@@ -28,7 +28,7 @@ namespace KillEmAll.Common
             }
         }
 
-        public void AddNeighbor(params INeighbor[] locations)
+        public void AddNeighbor(params Location[] locations)
         {
             foreach (var location in locations)
             {
@@ -36,7 +36,7 @@ namespace KillEmAll.Common
             }
         }
 
-        public void RemoveNeighbor(params INeighbor[] locations)
+        public void RemoveNeighbor(params Location[] locations)
         {
             throw new NotImplementedException();
         }

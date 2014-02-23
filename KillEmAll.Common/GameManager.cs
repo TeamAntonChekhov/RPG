@@ -11,12 +11,21 @@ namespace KillEmAll.Common
         private Dungeon currentDungeon;
         private Player player;
 
+        public Dungeon CurrentDungeon
+        {
+            get
+            {
+                return this.currentDungeon;
+            }
+        }
+
         public event EventHandler Render;
         public event EventHandler UserInput;
 
         public GameManager()
         {
             player = Player.Instance;
+            currentDungeon = World.Init();
         }
 
         public GameState Run()
