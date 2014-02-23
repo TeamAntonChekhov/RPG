@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace KillEmAll.ConsoleUI
 {
-    static class Renderer
+    static class ConsoleRenderer
     {
         private static ScreenSymbol[,] screenBuffer;
 
-        static Renderer()
+        static ConsoleRenderer()
         {
             screenBuffer = new ScreenSymbol[Settings.ConsoleHeight, Settings.ConsoleWidth];
         }

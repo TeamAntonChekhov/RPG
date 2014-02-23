@@ -44,7 +44,7 @@ namespace KillEmAll.ConsoleUI
                         return menuItems[selected].Value;
                     }
                 }
-                Renderer.ClearConsoleBuffer();
+                ConsoleRenderer.ClearConsoleBuffer();
 
                 // Draw menu
                 Console.Clear();
@@ -53,11 +53,11 @@ namespace KillEmAll.ConsoleUI
                 {
                     if (i == selected)
                     {
-                        Renderer.DrawTextOnPostion(topLeftRow + i * 2, topLeftCol, menuItems[i].Key, ConsoleColor.Red, ConsoleColor.White);
+                        ConsoleRenderer.DrawTextOnPostion(topLeftRow + i * 2, topLeftCol, menuItems[i].Key, ConsoleColor.Red, ConsoleColor.White);
                     }
                     else
                     {
-                        Renderer.DrawTextOnPostion(topLeftRow + i * 2, topLeftCol, menuItems[i].Key);
+                        ConsoleRenderer.DrawTextOnPostion(topLeftRow + i * 2, topLeftCol, menuItems[i].Key);
                     }
                 }
 
