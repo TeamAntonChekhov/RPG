@@ -5,7 +5,7 @@ using System.Text;
 
 namespace KillEmAll.Common
 {
-    public abstract class Item
+    public abstract class Item : GameObject
     {
     }
 }

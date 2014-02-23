@@ -5,7 +5,7 @@ using System.Text;
 
 namespace KillEmAll.Common
 {
-    class Player : Character
+    class Player : Character, IMovable, IFighter
     {
         static Player instance;
 

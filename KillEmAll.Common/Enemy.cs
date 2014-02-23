@@ -5,7 +5,7 @@ using System.Text;
 
 namespace KillEmAll.Common
 {
-    public abstract class Enemy : Character
+    public abstract class Enemy : Character, IFighter
     {
     }
 }

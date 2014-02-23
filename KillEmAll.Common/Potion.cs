@@ -5,7 +5,7 @@ using System.Text;
 
 namespace KillEmAll.Common
 {
-    public class Potion
+    public class Potion : Item, IUsable
     {
     }
 }

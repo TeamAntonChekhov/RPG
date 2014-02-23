@@ -5,7 +5,8 @@ using System.Text;
 
 namespace KillEmAll.Common
 {
-    class Dungeon : Location
+    public class Dungeon : Location
     {
+       
     }
 }
