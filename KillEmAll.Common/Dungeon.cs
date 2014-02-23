@@ -7,6 +7,9 @@ namespace KillEmAll.Common
 {
     public class Dungeon : Location
     {
-       
+        public Dungeon(string name)
+            : base(name, null)
+        {
+        }
     }
 }

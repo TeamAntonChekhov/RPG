@@ -7,5 +7,10 @@ namespace KillEmAll.Common
 {
     public class Potion : Item, IUsable
     {
+        public Potion(string name)
+            : base(name)
+        {
+
+        }
     }
 }

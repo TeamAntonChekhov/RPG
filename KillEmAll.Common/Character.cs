@@ -7,5 +7,10 @@ namespace KillEmAll.Common
 {
     public abstract class Character : GameObject
     {
+        protected Character(string name)
+            : base(name)
+        {
+
+        } 
     }
 }

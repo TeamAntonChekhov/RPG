@@ -9,7 +9,7 @@ namespace KillEmAll.Common
     {
         static Player instance;
 
-        private Player()
+        private Player(string name) : base(name)
         {
         }
 
@@ -19,7 +19,7 @@ namespace KillEmAll.Common
             {
                 if (instance == null)
                 {
-                    instance = new Player();
+                    instance = new Player("Goshko");
                 }
 
                 return instance;
