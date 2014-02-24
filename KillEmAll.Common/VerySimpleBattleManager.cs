@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace KillEmAll.Common
 {
+    //  Very simple implementation of Battle Manager relying only on 
+    //  the current fighters health, attack and defense skills.
+    //  The battle continues until one of the fighters health goes below 0.
     public class VerySimpleBattleManager : IBattleManager
     {
         public void ResolveBattle(IFighter first, IFighter second)

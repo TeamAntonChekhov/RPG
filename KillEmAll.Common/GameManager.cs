@@ -41,6 +41,11 @@ namespace KillEmAll.Common
         {
             GameState gameState = GameState.NewGame;
 
+            //  battle idea:
+            //  1) Check the enemies in the current dungeon.
+            //  2) For each enemy resolve a battle with the player using the
+            //      battleManager instance variable.
+            //      For let's consider the player strikes first.
             while (true)
             {
                 // Draw world event
