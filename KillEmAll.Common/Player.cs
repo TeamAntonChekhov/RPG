@@ -5,11 +5,11 @@ using System.Text;
 
 namespace KillEmAll.Common
 {
-    class Player : Character, IMovable, IFighter
+    public class Player : Character, IMovable, IFighter
     {
         static Player instance;
 
-        private Player(string name) : base(name)
+        public Player(string name) : base(name)
         {
         }
 
@@ -41,5 +41,9 @@ namespace KillEmAll.Common
         public double DefenseSkill { get; set; }
         public double MaxDefenseSkill { get; set; }
 
+        public override string ToString()
+        {
+            return string.Format("{0}, Health: {1}/{2}, AttackSkill: {3}/{4}, DefenseSkill: {5}/{6}", base.ToString(), Health, MaxHealth, AttackSkill, MaxAttackSkill, DefenseSkill, MaxDefenseSkill);
+        }
     }
 }

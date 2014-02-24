@@ -5,7 +5,7 @@ using System.Text;
 
 namespace KillEmAll.Common
 {
-    public abstract class Enemy : Character, IFighter
+    public class Enemy : Character, IFighter
     {
         public Enemy(string name)
             : base(name)
@@ -16,5 +16,10 @@ namespace KillEmAll.Common
         public double Health { get; set; }
         public double AttackSkill { get; set; }
         public double DefenseSkill { get; set; }
+
+        public override string ToString()
+        {
+            return string.Format("{0}, Health: {1}, AttackSkill: {2}, DefenseSkill: {3}", base.ToString(), Health, AttackSkill, DefenseSkill);
+        }
     }
 }
