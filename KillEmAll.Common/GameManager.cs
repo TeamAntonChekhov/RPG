@@ -10,6 +10,7 @@ namespace KillEmAll.Common
     {
         private Dungeon currentDungeon;
         private Player player;
+        private IBattleManager battleManager;
 
         public Dungeon CurrentDungeon
         {
@@ -33,6 +34,7 @@ namespace KillEmAll.Common
         {
             player = Player.Instance;
             currentDungeon = World.Init();
+            battleManager = new VerySimpleBattleManager();
         }
 
         public GameState Run()
