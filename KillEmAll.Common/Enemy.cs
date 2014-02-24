@@ -38,6 +38,8 @@ namespace KillEmAll.Common
         
         public double AttackSkill { get; set; }
         public double DefenseSkill { get; set; }
+        public double WeaponStrength { get; set; }
+        public double ArmorStrength { get; set; }
 
         public double ExperiencePointsGain()
         {
@@ -46,7 +48,7 @@ namespace KillEmAll.Common
 
         public override string ToString()
         {
-            return string.Format("{0}, Health: {1}, AttackSkill: {2}, DefenseSkill: {3}, ExpGain: {4}", base.ToString(), Health, AttackSkill, DefenseSkill, ExperiencePointsGain());
+            return string.Format("{0}, Health: {1}, AttackSkill: {2}, DefenseSkill: {3}, WeaponStrength: {4}, ArmorStrength: {5}, ExpGain: {6}", base.ToString(), Health, AttackSkill, DefenseSkill, WeaponStrength, ArmorStrength, ExperiencePointsGain());
         }
     }
 }

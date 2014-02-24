@@ -15,7 +15,9 @@ namespace KillEmAll.ConsoleTests
             {
                 Health = 100,
                 AttackSkill = 6,
-                DefenseSkill = 5
+                DefenseSkill = 5,
+                WeaponStrength = 5,
+                ArmorStrength = 4
             };
         }
 
@@ -25,7 +27,9 @@ namespace KillEmAll.ConsoleTests
             {
                 Health = 80,
                 AttackSkill = 4,
-                DefenseSkill = 2
+                DefenseSkill = 4,
+                WeaponStrength = 2,
+                ArmorStrength = 3
             };
         }
 
@@ -59,9 +63,43 @@ namespace KillEmAll.ConsoleTests
 
         }
 
+        private static void TestNotSoSimpleBattleManager()
+        {
+            IBattleManager man = new NotSoSimpleBattleManager();
+
+            //  james strikes first
+            Player james = GeneratePlayer();
+            Enemy justin = GenerateEnemy();
+
+            Console.WriteLine(james);
+            Console.WriteLine(justin);
+
+            man.ResolveBattle(james, justin);
+
+            Console.WriteLine(james);
+            Console.WriteLine(justin);
+
+            //  justin strikes first
+            james = GeneratePlayer();
+            justin = GenerateEnemy();
+
+            Console.WriteLine(james);
+            Console.WriteLine(justin);
+
+            man.ResolveBattle(justin, james);
+
+            Console.WriteLine(james);
+            Console.WriteLine(justin);
+
+        }
+
         static void Main(string[] args)
         {
             TestVerySimpleBattleManager();
+
+            Console.WriteLine("\n=================\n");
+
+            TestNotSoSimpleBattleManager();
 
             Console.ReadLine();
         }

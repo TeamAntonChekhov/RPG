@@ -54,6 +54,7 @@
     <Compile Include="Items.cs" />
     <Compile Include="IUsable.cs" />
     <Compile Include="Location.cs" />
+    <Compile Include="NotSoSimpleBattleManager.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="Potion.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

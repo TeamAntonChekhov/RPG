@@ -34,7 +34,7 @@ namespace KillEmAll.Common
         {
             player = Player.Instance;
             currentDungeon = World.Init();
-            battleManager = new VerySimpleBattleManager();
+            battleManager = new NotSoSimpleBattleManager();
         }
 
         public GameState Run()

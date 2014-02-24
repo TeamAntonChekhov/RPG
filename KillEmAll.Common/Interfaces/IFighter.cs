@@ -10,5 +10,7 @@ namespace KillEmAll.Common
         double Health { get; set; }
         double AttackSkill { get; set; }
         double DefenseSkill { get; set; }
+        double WeaponStrength { get; set; }
+        double ArmorStrength { get; set; }
     }
 }

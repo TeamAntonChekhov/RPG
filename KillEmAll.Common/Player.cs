@@ -39,11 +39,13 @@ namespace KillEmAll.Common
         public double AttackSkill { get; set; }
         public double MaxAttackSkill { get; set; }
         public double DefenseSkill { get; set; }
+        public double WeaponStrength { get; set; }
+        public double ArmorStrength { get; set; }
         public double MaxDefenseSkill { get; set; }
 
         public override string ToString()
         {
-            return string.Format("{0}, Health: {1}/{2}, AttackSkill: {3}/{4}, DefenseSkill: {5}/{6}", base.ToString(), Health, MaxHealth, AttackSkill, MaxAttackSkill, DefenseSkill, MaxDefenseSkill);
+            return string.Format("{0}, Health: {1}/{2}, AttackSkill: {3}/{4}, DefenseSkill: {5}/{6}, WeaponStrength: {7}, ArmorStrength: {8}", base.ToString(), Health, MaxHealth, AttackSkill, MaxAttackSkill, DefenseSkill, MaxDefenseSkill, WeaponStrength, ArmorStrength);
         }
     }
 }
