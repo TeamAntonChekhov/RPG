@@ -46,6 +46,14 @@ namespace KillEmAll.Common
             //  2) For each enemy resolve a battle with the player using the
             //      battleManager instance variable.
             //      For let's consider the player strikes first.
+            //  3) If the player wins he can get the experience points from the enemy
+            //      and distribute them among his skills (attach and defence)
+            //  4) If the enemy has better equipment (weapon or armor) the player can 
+            //      take them after the battle.
+            //  5) The player will restore his health with the time.
+            //  6) We can added collection of Potions to each dungeon and if the player
+            //      gets them after killing the enemies the player will restore the
+            //      corresponding amount of health.
             while (true)
             {
                 // Draw world event
