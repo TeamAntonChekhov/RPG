@@ -25,5 +25,13 @@ namespace KillEmAll.Common
                 return instance;
             }
         }
+
+        public double Health { get; set; }
+        public double MaxHealth { get; set; }
+        public double AttackSkill { get; set; }
+        public double MaxAttackSkill { get; set; }
+        public double DefenseSkill { get; set; }
+        public double MaxDefenseSkill { get; set; }
+
     }
 }

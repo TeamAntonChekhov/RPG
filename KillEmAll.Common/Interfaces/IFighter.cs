@@ -7,5 +7,8 @@ namespace KillEmAll.Common
 {
     public interface IFighter
     {
+        double Health { get; set; }
+        double AttackSkill { get; set; }
+        double DefenseSkill { get; set; }
     }
 }
