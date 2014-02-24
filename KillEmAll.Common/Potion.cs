@@ -12,5 +12,7 @@ namespace KillEmAll.Common
         {
 
         }
+
+        public double HealthRecovery { get; set; }
     }
 }
