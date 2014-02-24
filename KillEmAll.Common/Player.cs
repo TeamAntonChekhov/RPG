@@ -19,7 +19,15 @@ namespace KillEmAll.Common
             {
                 if (instance == null)
                 {
-                    instance = new Player("Goshko");
+                    instance = new Player("Goshko")
+                    {
+                        Health = 100,
+                        MaxHealth = 100,
+                        AttackSkill = 1,
+                        MaxAttackSkill = 10,
+                        DefenseSkill = 1,
+                        MaxDefenseSkill = 10
+                    };
                 }
 
                 return instance;
