@@ -13,7 +13,9 @@ namespace KillEmAll.ConsoleUI
             GameManager newGame = new GameManager();
 
             newGame.Render += ConsoleRenderer.TestWrite;
-            newGame.UserInput += ConsoleInput.TestReadInput;
+
+            //newGame.UserInput += ConsoleInput.TestReadInput;
+            newGame.UserInput += ConsoleInput.ReadCommand;
 
 
             while (true)
