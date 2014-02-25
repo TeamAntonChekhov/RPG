@@ -36,6 +36,15 @@ namespace KillEmAll.ConsoleUI
             Console.ResetColor();
         }
 
+        public static void DrawTextOnPostion(int row, int col, char character, ConsoleColor textColor = ConsoleColor.White, ConsoleColor backgroundColor = ConsoleColor.Black)
+        {
+            Console.SetCursorPosition(col, row);
+            Console.ForegroundColor = textColor;
+            Console.BackgroundColor = backgroundColor;
+            Console.Write(character);
+            Console.ResetColor();
+        }
+
         public static void ClearConsoleBuffer()
         {
             while (Console.KeyAvailable)
@@ -77,13 +86,77 @@ namespace KillEmAll.ConsoleUI
             Console.Clear();
             int count = 0;
             Dungeon currentDungeon = (sender as GameManager).CurrentDungeon;
-            DrawTextOnPostion(5, 10, string.Format("Name - {0}", currentDungeon.Name));
 
+
+            DrawTextOnPostion(1, 0, string.Format("{0,0} {1,0} {2,0}", new string('═', 25), currentDungeon.Name, new string('═', 68 - (25 + currentDungeon.Name.Length))));
+           
+           DrawTextOnPostion(2, 0, "Exits:");
 
             foreach (var neighbor in currentDungeon.Neighbors)
             {
-                DrawTextOnPostion(10 + count++, 10, neighbor.ToString());
+                DrawTextOnPostion(3 + count++, 0, neighbor.ToString());
             }
+
+        }
+
+        public static void RenderLine(string text,int left = 0,int top = 0,
+            ConsoleColor foregroundColor = ConsoleColor.White,
+            ConsoleColor backgroundColor = ConsoleColor.Black)
+        {
+            DrawTextOnPostion(left, top + 1, new string('═', 40));
+        }
+
+        public static void RenderLocationInfo(GameObject gameObject)
+        {
+            RenderEnemies();
+            RenderItems();
+           // RenderCurrentDungeon();
+           //RenderExits();
+        }
+
+        public static void RenderPlayerInfo(GameObject gameObject)
+        {
+            RenderPlayerInventory();
+            RenderPlayerStats();
+        }
+
+        private static void RenderPlayerStats()
+        {
+            throw new NotImplementedException();
+        }
+
+        private static void RenderPlayerInventory()
+        {
+            throw new NotImplementedException();
+        }
+
+        private static void RenderCurrentDungeon(object sender, EventArgs e)
+        {
+            Dungeon currentDungeon = (sender as GameManager).CurrentDungeon;
+
+            DrawTextOnPostion(1, 0, string.Format("{0,0} {1,0} {2,0}", new string('═', 25), currentDungeon.Name, new string('═', 68 - (25 + currentDungeon.Name.Length))));
+            
+        }
+
+        private static void RenderExits(object sender, EventArgs e)
+        {
+            int count = 0;
+            Dungeon currentDungeon = (sender as GameManager).CurrentDungeon;
+
+            foreach (var neighbor in currentDungeon.Neighbors)
+            {
+                DrawTextOnPostion(3 + count++, 0, neighbor.ToString());
+            }
+        }
+
+        private static void RenderItems()
+        {
+            throw new NotImplementedException();
+        }
+
+        private static void RenderEnemies()
+        {
+            throw new NotImplementedException();
         }
     }
 }
