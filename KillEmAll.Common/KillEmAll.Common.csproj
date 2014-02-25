@@ -51,7 +51,7 @@
     <Compile Include="Interfaces\IFighter.cs" />
     <Compile Include="Interfaces\IMovable.cs" />
     <Compile Include="Items.cs" />
-    <Compile Include="IUsable.cs" />
+    <Compile Include="Interfaces\IUsable.cs" />
     <Compile Include="Location.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="Potion.cs" />
