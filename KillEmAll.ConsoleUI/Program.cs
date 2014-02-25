@@ -5,7 +5,7 @@ namespace KillEmAll.ConsoleUI
 {
     class Program
     {
-        private static GameState gameState = GameState.MainMenu;
+        private static GameState gameState = GameState.GameOver;
 
         static void Main()
         {
@@ -13,7 +13,9 @@ namespace KillEmAll.ConsoleUI
             GameManager newGame = new GameManager();
 
             newGame.Render += ConsoleRenderer.TestWrite;
-            newGame.UserInput += ConsoleInput.TestReadInput;
+
+            //newGame.UserInput += ConsoleInput.TestReadInput;
+            newGame.UserInput += ConsoleInput.ReadCommand;
 
 
             while (true)
@@ -29,7 +31,8 @@ namespace KillEmAll.ConsoleUI
                         break;
 
                     case GameState.GameOver:
-                        //gameState = 
+                        gameState = GameScreen.GameOver();
+                        break;
 
                     case GameState.Exit:
                         return;

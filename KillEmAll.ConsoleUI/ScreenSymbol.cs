@@ -13,7 +13,7 @@ namespace KillEmAll.ConsoleUI
         public ConsoleColor BackgroundColor { get; set; }
 
         /// <summary>
-        /// Initializes new instance of ScreenSymbo struct identified by ...
+        /// Initializes new instance of ScreenSymbol struct identified by ...
         /// </summary>
         /// <param name="symbol">asddas</param>
         /// <param name="foregroundColor"></param>
