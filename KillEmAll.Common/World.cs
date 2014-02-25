@@ -24,14 +24,14 @@ namespace KillEmAll.Common
         private static void InitializeDungeons()
         {
 
-            dungeons.Add(new Dungeon("FirstDungeon"));
-            dungeons.Add(new Dungeon("SecondDungeon"));
-            dungeons.Add(new Dungeon("ThirdDungeon"));
+            //dungeons.Add(new Dungeon("FirstDungeon"));
+            //dungeons.Add(new Dungeon("SecondDungeon"));
+            //dungeons.Add(new Dungeon("ThirdDungeon"));
 
 
-            dungeons[0].AddNeighbor(dungeons[1], dungeons[2]);
-            dungeons[1].AddNeighbor(dungeons[0], dungeons[2]);
-            dungeons[2].AddNeighbor(dungeons[0], dungeons[1]);
+            //dungeons[0].AddNeighbor(dungeons[1], dungeons[2]);
+            //dungeons[1].AddNeighbor(dungeons[0], dungeons[2]);
+            //dungeons[2].AddNeighbor(dungeons[0], dungeons[1]);
         }
 
     }

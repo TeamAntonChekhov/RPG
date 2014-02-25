@@ -44,6 +44,7 @@
     <Compile Include="Enemy.cs" />
     <Compile Include="Enumerations\GameState.cs" />
     <Compile Include="Enumerations\ItemType.cs" />
+    <Compile Include="Enumerations\LocationType.cs" />
     <Compile Include="GameManager.cs" />
     <Compile Include="GameObject.cs" />
     <Compile Include="IGameObject.cs" />
