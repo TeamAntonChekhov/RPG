@@ -80,7 +80,7 @@ namespace KillEmAll.ConsoleUI
             DrawTextOnPostion(5, 10, string.Format("Name - {0}", currentDungeon.Name));
 
 
-            foreach (var neighbor in currentDungeon.Neighbors)
+            foreach (var neighbor in currentDungeon.Exits)
             {
                 DrawTextOnPostion(10 + count++, 10, neighbor.ToString());
             }

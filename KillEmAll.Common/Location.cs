@@ -9,11 +9,53 @@ namespace KillEmAll.Common
     public abstract class Location : GameObject, IExitable
     {
         private HashSet<Location> exits;
+        private Collection<Character> characters;
+        private Collection<Item> items;
+        private LocationType locationType;
 
-        protected Location(string name, IEnumerable<Location> exits) 
+
+        protected Location(string name, Collection<Character> characters, Collection<Item> items)
             : base(name)
         {
-            this.Exits = exits;
+            this.Exits = new Collection<Location>();
+            this.Characters = characters;
+            this.Items = items;
+        }
+
+        public LocationType LocationType
+        {
+            get
+            {
+                return this.locationType;
+            }
+            protected set
+            {
+                this.locationType = value;
+            }
+        }
+
+        public Collection<Item> Items
+        {
+            get
+            {
+                return new Collection<Item>(items);
+            }
+            protected set
+            {
+                this.items = value;
+            }
+        }
+
+        public Collection<Character> Characters
+        {
+            get
+            {
+                return new Collection<Character>(characters);
+            }
+            protected set
+            {
+                this.characters = value;
+            }
         }
 
         public IEnumerable<Location> Exits

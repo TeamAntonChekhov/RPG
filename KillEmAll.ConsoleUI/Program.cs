@@ -5,7 +5,7 @@ namespace KillEmAll.ConsoleUI
 {
     class Program
     {
-        private static GameState gameState = GameState.GameOver;
+        private static GameState gameState = GameState.MainMenu;
 
         static void Main()
         {
