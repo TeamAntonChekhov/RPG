@@ -47,7 +47,7 @@
     <Compile Include="GameManager.cs" />
     <Compile Include="GameObject.cs" />
     <Compile Include="IGameObject.cs" />
-    <Compile Include="INeighbor.cs" />
+    <Compile Include="IExitable.cs" />
     <Compile Include="Interfaces\IFighter.cs" />
     <Compile Include="Interfaces\IMovable.cs" />
     <Compile Include="Items.cs" />

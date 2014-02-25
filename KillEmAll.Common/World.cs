@@ -29,9 +29,9 @@ namespace KillEmAll.Common
             dungeons.Add(new Dungeon("ThirdDungeon"));
 
 
-            dungeons[0].AddNeighbor(dungeons[1], dungeons[2]);
-            dungeons[1].AddNeighbor(dungeons[0], dungeons[2]);
-            dungeons[2].AddNeighbor(dungeons[0], dungeons[1]);
+            dungeons[0].AddExit(dungeons[1], dungeons[2]);
+            dungeons[1].AddExit(dungeons[0], dungeons[2]);
+            dungeons[2].AddExit(dungeons[0], dungeons[1]);
         }
 
     }

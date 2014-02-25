@@ -7,5 +7,6 @@ namespace KillEmAll.Common
 {
     public interface IMovable
     {
+        void GoTo(Location location);
     }
 }

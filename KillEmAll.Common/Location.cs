@@ -6,37 +6,37 @@ using System.Text;
 
 namespace KillEmAll.Common
 {
-    public abstract class Location : GameObject, INeighbor
+    public abstract class Location : GameObject, IExitable
     {
-        private Collection<Location> neighbors;
+        private HashSet<Location> exits;
 
-        protected Location(string name, Collection<Location> neighbors) 
+        protected Location(string name, IEnumerable<Location> exits) 
             : base(name)
         {
-            this.Neighbors = neighbors;
+            this.Exits = exits;
         }
 
-        public Collection<Location> Neighbors
+        public IEnumerable<Location> Exits
         {
             get
             {
-                return new Collection<Location>(this.neighbors);
+                return new HashSet<Location>(this.exits);
             }
             protected set
             {
-                this.neighbors = value;
+                this.exits = new HashSet<Location>(value);
             }
         }
 
-        public void AddNeighbor(params Location[] locations)
+        public void AddExit(params Location[] locations)
         {
             foreach (var location in locations)
             {
-                this.neighbors.Add(location);
+                this.exits.Add(location);
             }
         }
 
-        public void RemoveNeighbor(params Location[] locations)
+        public void RemoveExit(params Location[] locations)
         {
             throw new NotImplementedException();
         }
