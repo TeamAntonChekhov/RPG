@@ -40,18 +40,21 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Character.cs" />
+    <Compile Include="DamageDealer.cs" />
     <Compile Include="Dungeon.cs" />
     <Compile Include="Enemy.cs" />
     <Compile Include="Enumerations\GameState.cs" />
     <Compile Include="Enumerations\ItemType.cs" />
+    <Compile Include="Enumerations\LocationType.cs" />
     <Compile Include="GameManager.cs" />
     <Compile Include="GameObject.cs" />
-    <Compile Include="IGameObject.cs" />
-    <Compile Include="INeighbor.cs" />
+    <Compile Include="Healer.cs" />
+    <Compile Include="Interfaces\IGameObject.cs" />
+    <Compile Include="Interfaces\IExitable.cs" />
     <Compile Include="Interfaces\IFighter.cs" />
     <Compile Include="Interfaces\IMovable.cs" />
     <Compile Include="Items.cs" />
-    <Compile Include="IUsable.cs" />
+    <Compile Include="Interfaces\IUsable.cs" />
     <Compile Include="Location.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="Potion.cs" />

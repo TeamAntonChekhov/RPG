@@ -7,10 +7,16 @@ namespace KillEmAll.Common
 {
     public abstract class Character : GameObject
     {
-        protected Character(string name)
+        protected int level;
+        protected double health;
+        protected double damage;
+        protected double armor;
+
+        protected Character(string name, int level)
             : base(name)
         {
 
+            this.level = level;
         } 
     }
 }

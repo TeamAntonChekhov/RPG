@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Collections.ObjectModel;
 
 namespace KillEmAll.Common
 {
@@ -24,14 +25,14 @@ namespace KillEmAll.Common
         private static void InitializeDungeons()
         {
 
-            dungeons.Add(new Dungeon("FirstDungeon"));
-            dungeons.Add(new Dungeon("SecondDungeon"));
-            dungeons.Add(new Dungeon("ThirdDungeon"));
+            dungeons.Add(new Dungeon("FirstDungeon", new Collection<Character>(), new Collection<Item>()));
+            dungeons.Add(new Dungeon("SecondDungeon", new Collection<Character>(), new Collection<Item>()));
+            dungeons.Add(new Dungeon("ThirdDungeon", new Collection<Character>(), new Collection<Item>()));
 
 
-            dungeons[0].AddNeighbor(dungeons[1], dungeons[2]);
-            dungeons[1].AddNeighbor(dungeons[0], dungeons[2]);
-            dungeons[2].AddNeighbor(dungeons[0], dungeons[1]);
+            dungeons[0].AddExit(dungeons[1], dungeons[2]);
+            dungeons[1].AddExit(dungeons[0], dungeons[2]);
+            dungeons[2].AddExit(dungeons[0], dungeons[1]);
         }
 
     }

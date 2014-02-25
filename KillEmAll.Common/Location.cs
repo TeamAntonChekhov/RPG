@@ -6,37 +6,79 @@ using System.Text;
 
 namespace KillEmAll.Common
 {
-    public abstract class Location : GameObject, INeighbor
+    public abstract class Location : GameObject, IExitable
     {
-        private Collection<Location> neighbors;
+        private HashSet<Location> exits;
+        private Collection<Character> characters;
+        private Collection<Item> items;
+        private LocationType locationType;
 
-        protected Location(string name, Collection<Location> neighbors) 
+
+        protected Location(string name, Collection<Character> characters, Collection<Item> items)
             : base(name)
         {
-            this.Neighbors = neighbors;
+            this.Exits = new Collection<Location>();
+            this.Characters = characters;
+            this.Items = items;
         }
 
-        public Collection<Location> Neighbors
+        public LocationType LocationType
         {
             get
             {
-                return new Collection<Location>(this.neighbors);
+                return this.locationType;
             }
             protected set
             {
-                this.neighbors = value;
+                this.locationType = value;
             }
         }
 
-        public void AddNeighbor(params Location[] locations)
+        public Collection<Item> Items
+        {
+            get
+            {
+                return new Collection<Item>(items);
+            }
+            protected set
+            {
+                this.items = value;
+            }
+        }
+
+        public Collection<Character> Characters
+        {
+            get
+            {
+                return new Collection<Character>(characters);
+            }
+            protected set
+            {
+                this.characters = value;
+            }
+        }
+
+        public IEnumerable<Location> Exits
+        {
+            get
+            {
+                return new HashSet<Location>(this.exits);
+            }
+            protected set
+            {
+                this.exits = new HashSet<Location>(value);
+            }
+        }
+
+        public void AddExit(params Location[] locations)
         {
             foreach (var location in locations)
             {
-                this.neighbors.Add(location);
+                this.exits.Add(location);
             }
         }
 
-        public void RemoveNeighbor(params Location[] locations)
+        public void RemoveExit(params Location[] locations)
         {
             throw new NotImplementedException();
         }

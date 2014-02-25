@@ -31,7 +31,8 @@ namespace KillEmAll.ConsoleUI
                         break;
 
                     case GameState.GameOver:
-                        //gameState = 
+                        gameState = GameScreen.GameOver();
+                        break;
 
                     case GameState.Exit:
                         return;

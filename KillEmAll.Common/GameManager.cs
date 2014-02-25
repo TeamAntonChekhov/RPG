@@ -17,13 +17,6 @@ namespace KillEmAll.Common
             {
                 return this.currentDungeon;
             }
-            set
-            {
-                // TODO: Validate neighbor
-                // TODO: More validation of dungeon
-
-                this.currentDungeon = value;
-            }
         }
 
         public event EventHandler Render;

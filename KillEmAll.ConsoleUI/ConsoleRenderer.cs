@@ -92,7 +92,7 @@ namespace KillEmAll.ConsoleUI
            
            DrawTextOnPostion(2, 0, "Exits:");
 
-            foreach (var neighbor in currentDungeon.Neighbors)
+            foreach (var neighbor in currentDungeon.Exits)
             {
                 DrawTextOnPostion(3 + count++, 0, neighbor.ToString());
             }

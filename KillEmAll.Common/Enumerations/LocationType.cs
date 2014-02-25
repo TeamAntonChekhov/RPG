@@ -1,13 +1,14 @@
-﻿using System;
+﻿﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace KillEmAll.Common
 {
-    public interface IGameObject
+    public enum LocationType
     {
-        int ID { get; }
-        string Name { get; }
+        Town,
+        Dungeon,
     }
 }
