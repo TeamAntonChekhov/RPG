@@ -5,7 +5,7 @@ namespace KillEmAll.ConsoleUI
 {
     class Program
     {
-        private static GameState gameState = GameState.MainMenu;
+        private static GameState gameState = GameState.GameOver;
 
         static void Main()
         {
@@ -31,7 +31,8 @@ namespace KillEmAll.ConsoleUI
                         break;
 
                     case GameState.GameOver:
-                        //gameState = 
+                        gameState = GameScreen.GameOver();
+                        break;
 
                     case GameState.Exit:
                         return;

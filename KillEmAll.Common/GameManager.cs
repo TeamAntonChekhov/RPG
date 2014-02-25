@@ -32,7 +32,7 @@ namespace KillEmAll.Common
         public GameManager()
         {
             player = Player.Instance;
-            currentDungeon = World.Init();
+            //currentDungeon = World.Init();
         }
 
         public GameState Run()
