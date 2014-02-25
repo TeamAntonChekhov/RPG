@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="ConsoleInput.cs" />
     <Compile Include="GameScreen.cs" />
+    <Compile Include="Instructions.cs" />
     <Compile Include="MainMenu.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
